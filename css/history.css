@@ -1,0 +1,65 @@
+/* ==========================================================
+   history.html
+   Note: .history-card / .empty / .score are created dynamically
+   by js/history.js — class names must match exactly.
+   ========================================================== */
+
+.history-container{
+  padding:clamp(36px, 6vw, 64px) 0 clamp(56px, 8vw, 96px);
+}
+
+.history-container h2{
+  font-size:clamp(1.5rem, 3vw, 2rem);
+  margin-bottom:1.4em;
+}
+
+#historyList{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:18px;
+}
+
+.history-card{
+  background:var(--parchment-200);
+  border:1px solid var(--parchment-300);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-card);
+  padding:22px;
+}
+
+.history-card h3{
+  font-size:1.15rem;
+  margin-bottom:.6em;
+  padding-bottom:.5em;
+  border-bottom:1px solid var(--parchment-300);
+}
+
+.history-card p{
+  font-size:.92rem;
+  margin:0 0 .5em;
+  color:var(--text-ink);
+}
+
+.history-card p:last-child{ margin-bottom:0; }
+
+.history-card strong{
+  color:var(--text-muted);
+  font-weight:600;
+}
+
+.history-card .score{
+  font-family:var(--font-display);
+  font-weight:600;
+  color:var(--gold-600);
+  font-size:1.05rem;
+}
+
+.empty{
+  grid-column:1 / -1;
+  text-align:center;
+  padding:64px 24px;
+  border:1.5px dashed var(--parchment-400);
+  border-radius:var(--radius-md);
+  color:var(--text-muted);
+  font-size:1.05rem;
+}

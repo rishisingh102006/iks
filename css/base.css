@@ -1,0 +1,253 @@
+/* ==========================================================
+   Nyāya Debate Evaluation System — Shared Foundation
+   Design language: manuscript & thread.
+   The five-step syllogism is treated as a sūtra (thread)
+   running through the whole interface — a vertical line
+   linking numbered nodes, set in Devanāgarī numerals.
+   ========================================================== */
+
+:root{
+
+  /* ink (dark, primary chrome) */
+  --ink-900:#12203c;
+  --ink-800:#1b2c4f;
+  --ink-700:#28406e;
+  --ink-600:#3a5589;
+
+  /* parchment (light, content surfaces) */
+  --parchment-100:#f7efdc;
+  --parchment-200:#efe1bf;
+  --parchment-300:#e2cd9a;
+  --parchment-400:#cfb379;
+
+  /* ink text on parchment */
+  --text-ink:#231a0f;
+  --text-muted:#6e5c3f;
+
+  /* cream text on ink */
+  --text-cream:#f7efdc;
+  --text-cream-muted:#c9bd9c;
+
+  /* accents */
+  --gold-500:#c1922e;
+  --gold-400:#d6ab52;
+  --gold-600:#a1791f;
+  --maroon-600:#7c2230;
+  --maroon-500:#9a2c3d;
+  --teal-600:#2e6b5e;
+  --teal-500:#3a8272;
+
+  --radius-sm:4px;
+  --radius-md:8px;
+
+  --shadow-card:0 1px 2px rgba(18,32,60,.06), 0 8px 24px -12px rgba(18,32,60,.28);
+  --shadow-deep:0 20px 60px -20px rgba(18,32,60,.55);
+
+  --font-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body:"Inter", "Segoe UI", system-ui, sans-serif;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--parchment-100);
+  color:var(--text-ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  color:var(--text-ink);
+  margin:0 0 .5em;
+  line-height:1.15;
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+
+p{ margin:0 0 1em; }
+
+a{ color:inherit; }
+
+img,svg{ display:block; max-width:100%; }
+
+button, input, textarea, select{
+  font-family:inherit;
+  font-size:1rem;
+  color:inherit;
+}
+
+button{ cursor:pointer; }
+
+::selection{ background:var(--gold-400); color:var(--ink-900); }
+
+:focus-visible{
+  outline:3px solid var(--gold-500);
+  outline-offset:2px;
+  border-radius:2px;
+}
+
+.container{
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 clamp(20px, 5vw, 48px);
+}
+
+/* ---------- shared site chrome ---------- */
+
+.site-header{
+  background:var(--ink-900);
+  color:var(--text-cream);
+  border-bottom:1px solid var(--ink-700);
+}
+
+.site-header .bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px clamp(20px, 5vw, 48px);
+  flex-wrap:wrap;
+}
+
+.wordmark{
+  display:flex;
+  align-items:baseline;
+  gap:.55em;
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:1.3rem;
+  color:var(--text-cream);
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.wordmark em{
+  font-style:italic;
+  color:var(--gold-400);
+}
+
+.wordmark small{
+  font-family:var(--font-body);
+  font-weight:500;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--text-cream-muted);
+}
+
+.site-footer{
+  background:var(--ink-900);
+  color:var(--text-cream-muted);
+  text-align:center;
+  padding:28px 20px;
+  font-size:.85rem;
+  border-top:1px solid var(--ink-700);
+}
+
+.site-footer p{ margin:0; }
+
+/* ---------- buttons ---------- */
+
+.btn, button[type="submit"], .action-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:.95rem;
+  padding:.85em 1.7em;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--gold-500);
+  background:var(--gold-500);
+  color:var(--ink-900);
+  text-decoration:none;
+  transition:background .18s var(--ease), color .18s var(--ease), transform .18s var(--ease), border-color .18s var(--ease);
+}
+
+.btn:hover, button[type="submit"]:hover, .action-btn:hover{
+  background:var(--gold-400);
+  border-color:var(--gold-400);
+  transform:translateY(-1px);
+}
+
+.btn:active, button[type="submit"]:active{
+  transform:translateY(0);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--text-cream);
+  border-color:var(--ink-600);
+}
+
+.btn-outline:hover{
+  background:var(--ink-700);
+  border-color:var(--ink-600);
+  color:var(--text-cream);
+}
+
+#logoutBtn{
+  display:inline-flex;
+  align-items:center;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:.85rem;
+  padding:.6em 1.3em;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--ink-600);
+  background:transparent;
+  color:var(--text-cream);
+  transition:background .18s var(--ease), border-color .18s var(--ease);
+}
+
+#logoutBtn:hover{
+  background:var(--ink-700);
+  border-color:var(--gold-500);
+}
+
+/* ---------- cards ---------- */
+
+.card{
+  background:var(--parchment-200);
+  border:1px solid var(--parchment-300);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-card);
+  padding:28px;
+}
+
+/* ---------- sutra thread: shared numbering motif ---------- */
+
+.sutra-num{
+  --n: "?";
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:2.1em;
+  height:2.1em;
+  border-radius:50%;
+  background:var(--ink-900);
+  color:var(--gold-400);
+  font-family:var(--font-display);
+  font-size:1.05rem;
+  font-weight:600;
+  flex-shrink:0;
+}

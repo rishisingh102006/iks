@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Nyāya Debate System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+    <div class="bar">
+
+        <span class="wordmark"><em>Nyāya</em><small>Admin Panel</small></span>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+</header>
+
+
+
+
+<main class="container">
+
+
+<p class="section-label">Administration</p>
+<h2 class="admin-title">Nyāya System Admin Panel</h2>
+
+
+<section class="stats">
+
+
+<div class="card stat-card">
+
+<h2>Users</h2>
+
+<p id="userCount">
+0
+</p>
+
+</div>
+
+
+
+
+<div class="card stat-card">
+
+<h2>Total Debates</h2>
+
+<p id="debateCount">
+0
+</p>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<section class="table-section card">
+
+
+<h2>All Debate Evaluations</h2>
+
+
+<div class="table-scroll">
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>User</th>
+
+<th>Topic</th>
+
+<th>Score</th>
+
+<th>Pramāṇa</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="debateTable">
+</tbody>
+
+
+</table>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+<script src="js/database.js"></script>
+
+<script src="js/admin.js"></script>
+
+
+</body>
+
+</html>

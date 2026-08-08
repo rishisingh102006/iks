@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Nyāya Logical Debate Evaluation System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+    <div class="bar">
+
+        <span class="wordmark"><em>Nyāya</em><small>Debate Evaluation</small></span>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+</header>
+
+
+
+<main>
+
+    <section class="welcome container">
+
+        <p class="section-label">Dashboard</p>
+
+        <h2>
+            Welcome, <span id="username"></span>
+        </h2>
+
+        <p class="lede">
+            Analyze arguments using the traditional Nyāya logical framework.
+        </p>
+
+    </section>
+
+
+
+    <section class="stats container">
+
+
+        <div class="card stat-card">
+
+            <h3>Total Debates</h3>
+
+            <p id="totalDebates">
+                0
+            </p>
+
+        </div>
+
+
+
+        <div class="card stat-card">
+
+            <h3>Average Score</h3>
+
+            <p id="averageScore">
+                0
+            </p>
+
+        </div>
+
+
+
+        <div class="card stat-card">
+
+            <h3>Nyāya Method</h3>
+
+            <p>
+                5 Steps
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="actions container">
+
+
+        <a href="debate.html" class="action-btn">
+            Start New Debate
+        </a>
+
+
+
+        <a href="history.html" class="action-btn action-btn-outline">
+            View History
+        </a>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <p>
+        Indian Knowledge Systems (IKS) Project
+    </p>
+
+</footer>
+
+
+
+<script src="js/database.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

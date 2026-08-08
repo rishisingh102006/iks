@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Nyāya Logical Debate Evaluation System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <div class="auth-screen">
+
+        <div class="auth-panel">
+            <span class="wordmark"><em>Nyāya</em><small>Debate Evaluation</small></span>
+
+            <p class="auth-panel-quote">
+                &ldquo;A thing is proved by direct perception, by inference,
+                or by the testimony of the trustworthy.&rdquo;
+            </p>
+            <p class="auth-panel-attr">— the pramāṇas of Nyāya epistemology</p>
+        </div>
+
+        <div class="container">
+
+            <div class="login-box card">
+
+                <h2>User Login</h2>
+
+                <p class="subtitle">
+                    Login to continue your debate evaluation.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label for="username">Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter Username"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="password">Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter Password"
+                            required>
+
+                    </div>
+
+                    <button type="submit">
+                        Login
+                    </button>
+
+                </form>
+
+                <p id="message"></p>
+
+                <div class="register-link">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Register Here
+                    </a>
+
+                </div>
+
+                <div class="back-home">
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/database.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* ==========================================================
+   admin.html
+   ========================================================== */
+
+main.container{
+  padding:clamp(36px, 6vw, 64px) 0 clamp(56px, 8vw, 96px);
+}
+
+.admin-title{
+  font-size:clamp(1.5rem, 3vw, 2rem);
+  margin-bottom:1.4em;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:18px;
+  margin-bottom:28px;
+}
+
+.stat-card h2{
+  font-family:var(--font-body);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:.6em;
+}
+
+.stat-card p{
+  font-family:var(--font-display);
+  font-size:2.4rem;
+  font-weight:600;
+  color:var(--ink-900);
+  margin:0;
+}
+
+.table-section h2{
+  font-family:var(--font-body);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1em;
+}
+
+.table-scroll{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.92rem;
+}
+
+thead th{
+  text-align:left;
+  font-family:var(--font-body);
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--text-cream);
+  background:var(--ink-900);
+  padding:.9em 1em;
+}
+
+thead th:first-child{ border-top-left-radius:var(--radius-sm); }
+thead th:last-child{ border-top-right-radius:var(--radius-sm); }
+
+tbody td{
+  padding:.85em 1em;
+  border-bottom:1px solid var(--parchment-300);
+  color:var(--text-ink);
+}
+
+tbody tr:nth-child(even){
+  background:var(--parchment-100);
+}
+
+tbody tr:hover{
+  background:var(--parchment-300);
+}
+
+tbody td[colspan]{
+  text-align:center;
+  color:var(--text-muted);
+  padding:2.4em 1em;
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluation Result | Nyāya Debate System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/result.css">
+
+</head>
+
+
+
+<body>
+
+
+
+<header class="site-header">
+    <div class="bar">
+
+        <span class="wordmark"><em>Nyāya</em><small>Debate Evaluation</small></span>
+
+        <a href="dashboard.html" class="btn-outline btn">
+            Dashboard
+        </a>
+
+    </div>
+</header>
+
+
+
+
+
+<main class="container">
+
+
+<section class="result-box">
+
+
+
+<p class="section-label">Evaluation Report</p>
+
+<h2>
+    Debate Analysis Result
+</h2>
+
+
+
+
+
+<div class="result-card card">
+
+
+<h3>
+    Topic
+</h3>
+
+
+<p id="topic" class="topic-text">
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="result-card card">
+
+
+<h3>
+    Nyāya Five Steps
+</h3>
+
+
+<ol class="sutra-thread">
+
+<li class="field">
+<span class="sutra-num">१</span>
+<div class="field-body">
+<strong>Pratijñā <em>&mdash; Claim</em></strong>
+<p id="claim"></p>
+</div>
+</li>
+
+<li class="field">
+<span class="sutra-num">२</span>
+<div class="field-body">
+<strong>Hetu <em>&mdash; Reason</em></strong>
+<p id="reason"></p>
+</div>
+</li>
+
+<li class="field">
+<span class="sutra-num">३</span>
+<div class="field-body">
+<strong>Udāharaṇa <em>&mdash; Example</em></strong>
+<p id="example"></p>
+</div>
+</li>
+
+<li class="field">
+<span class="sutra-num">४</span>
+<div class="field-body">
+<strong>Upanaya <em>&mdash; Application</em></strong>
+<p id="application"></p>
+</div>
+</li>
+
+<li class="field">
+<span class="sutra-num">५</span>
+<div class="field-body">
+<strong>Nigamana <em>&mdash; Conclusion</em></strong>
+<p id="conclusion"></p>
+</div>
+</li>
+
+</ol>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="analysis">
+
+
+
+
+<div class="box card">
+
+
+<h3>
+Score
+</h3>
+
+
+<p id="score" class="score-value">
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="box card">
+
+
+<h3>
+Pramāṇa
+</h3>
+
+
+<p id="pramana">
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="box card">
+
+
+<h3>
+Detected Fallacies
+</h3>
+
+
+<p id="fallacies">
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="final-result card">
+
+
+<h3>
+Final Evaluation
+</h3>
+
+
+<p id="evaluationText">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="buttons">
+
+
+<a href="debate.html" class="btn">
+Evaluate Another Debate
+</a>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+
+
+
+
+<!-- Database -->
+
+<script src="js/database.js"></script>
+
+
+<!-- Result Logic -->
+
+<script src="js/result.js"></script>
+
+
+<!-- PDF Generator -->
+
+<script src="js/pdf.js"></script>
+
+
+
+</body>
+
+</html>

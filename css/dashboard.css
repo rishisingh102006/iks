@@ -1,0 +1,74 @@
+/* ==========================================================
+   dashboard.html
+   ========================================================== */
+
+.welcome{
+  padding:clamp(40px, 7vw, 72px) 0 8px;
+}
+
+.welcome #username{
+  color:var(--gold-600);
+}
+
+.welcome .lede{
+  color:var(--text-muted);
+  font-size:1.05rem;
+  max-width:56ch;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:18px;
+  padding:24px 0;
+}
+
+.stat-card{
+  text-align:left;
+}
+
+.stat-card h3{
+  font-family:var(--font-body);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:.6em;
+}
+
+.stat-card p{
+  font-family:var(--font-display);
+  font-size:2.4rem;
+  font-weight:600;
+  color:var(--ink-900);
+  margin:0;
+}
+
+.actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  padding:16px 0 clamp(56px, 8vw, 96px);
+}
+
+.action-btn{
+  font-size:1rem;
+  padding:1em 1.9em;
+}
+
+.action-btn-outline{
+  background:transparent;
+  color:var(--ink-900);
+  border-color:var(--ink-900);
+}
+
+.action-btn-outline:hover{
+  background:var(--ink-900);
+  color:var(--text-cream);
+}
+
+@media (max-width: 500px){
+  .actions{ flex-direction:column; }
+  .action-btn{ width:100%; }
+}

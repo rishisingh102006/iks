@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Debate | Nyāya Logical Debate Evaluation System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/debate.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+    <div class="bar">
+
+        <span class="wordmark"><em>Nyāya</em><small>Debate Evaluation</small></span>
+
+        <a href="dashboard.html" class="btn-outline btn">
+            Dashboard
+        </a>
+
+    </div>
+</header>
+
+
+
+
+<main class="container">
+
+
+<section class="debate-container">
+
+
+<p class="section-label">New Debate</p>
+
+<h2>
+    Create Your Logical Argument
+</h2>
+
+
+<p class="description">
+    Select a prepared Nyāya argument from the database, then walk it
+    through the five links of the syllogism below.
+</p>
+
+
+
+
+<!-- SAMPLE DATABASE BUTTON -->
+
+<div class="sample-box card">
+
+
+<label for="sampleSelect">
+    Select Sample Debate
+</label>
+
+
+<div class="sample-row">
+
+<select id="sampleSelect">
+
+    <option value="">
+        -- Select Debate Topic --
+    </option>
+
+</select>
+
+
+
+<button type="button" id="loadSample">
+    Load Sample Argument
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<form id="debateForm">
+
+
+<div class="field field-topic">
+
+<label for="topic">
+    Topic of Debate
+</label>
+
+
+<input
+type="text"
+id="topic"
+readonly>
+
+</div>
+
+
+
+<ol class="sutra-thread">
+
+<li class="field">
+
+<span class="sutra-num">१</span>
+
+<div class="field-body">
+<label for="claim">
+    Pratijñā <em>&mdash; Claim / Proposition</em>
+</label>
+
+<textarea
+id="claim"
+readonly></textarea>
+</div>
+
+</li>
+
+
+<li class="field">
+
+<span class="sutra-num">२</span>
+
+<div class="field-body">
+<label for="reason">
+    Hetu <em>&mdash; Reason</em>
+</label>
+
+<textarea
+id="reason"
+readonly></textarea>
+</div>
+
+</li>
+
+
+<li class="field">
+
+<span class="sutra-num">३</span>
+
+<div class="field-body">
+<label for="example">
+    Udāharaṇa <em>&mdash; Example</em>
+</label>
+
+<textarea
+id="example"
+readonly></textarea>
+</div>
+
+</li>
+
+
+<li class="field">
+
+<span class="sutra-num">४</span>
+
+<div class="field-body">
+<label for="application">
+    Upanaya <em>&mdash; Application</em>
+</label>
+
+<textarea
+id="application"
+readonly></textarea>
+</div>
+
+</li>
+
+
+<li class="field">
+
+<span class="sutra-num">५</span>
+
+<div class="field-body">
+<label for="conclusion">
+    Nigamana <em>&mdash; Conclusion</em>
+</label>
+
+<textarea
+id="conclusion"
+readonly></textarea>
+</div>
+
+</li>
+
+</ol>
+
+
+
+<button type="submit">
+    Evaluate Debate
+</button>
+
+
+
+</form>
+
+
+
+
+<p id="message"></p>
+
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+
+
+<script src="js/database.js"></script>
+
+
+<script>
+
+
+/* ======================================
+   Sample Debate Loader
+====================================== */
+
+
+const select =
+document.getElementById("sampleSelect");
+
+
+const loadButton =
+document.getElementById("loadSample");
+
+
+
+
+// Load database debates into dropdown
+
+defaultDebates.forEach(function(debate,index){
+
+
+    let option =
+    document.createElement("option");
+
+
+    option.value=index;
+
+
+    option.textContent =
+    debate.topic;
+
+
+    select.appendChild(option);
+
+
+});
+
+
+
+
+
+
+// Fill fields from database
+
+
+loadButton.addEventListener(
+"click",
+function(){
+
+
+    let index =
+    select.value;
+
+
+
+    if(index===""){
+
+
+        alert("Please select a debate topic.");
+
+        return;
+    }
+
+
+
+
+    let debate =
+    defaultDebates[index];
+
+
+
+
+    document.getElementById("topic").value =
+    debate.topic;
+
+
+
+    document.getElementById("claim").value =
+    debate.claim;
+
+
+
+    document.getElementById("reason").value =
+    debate.reason;
+
+
+
+    document.getElementById("example").value =
+    debate.example;
+
+
+
+    document.getElementById("application").value =
+    debate.application;
+
+
+
+    document.getElementById("conclusion").value =
+    debate.conclusion;
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+<script src="js/evaluation.js"></script>
+
+
+</body>
+
+</html>

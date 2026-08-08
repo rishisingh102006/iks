@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Nyāya Logical Debate Evaluation System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+
+    <div class="auth-screen">
+
+        <div class="auth-panel">
+            <span class="wordmark"><em>Nyāya</em><small>Debate Evaluation</small></span>
+
+            <p class="auth-panel-quote">
+                &ldquo;Nigamana is the claim, restated &mdash; no longer
+                asserted, but earned.&rdquo;
+            </p>
+            <p class="auth-panel-attr">— the fifth limb of the Nyāya syllogism</p>
+        </div>
+
+        <div class="container">
+
+            <div class="register-box card">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Register to begin evaluating debates.
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter Full Name"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter Email Address"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Choose Username"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create Password"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm Password"
+                            required>
+                    </div>
+
+                    <button type="submit">
+                        Register
+                    </button>
+
+                </form>
+
+                <p id="message"></p>
+
+                <div class="login-link">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login Here
+                    </a>
+
+                </div>
+
+                <div class="back-home">
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/database.js"></script>
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

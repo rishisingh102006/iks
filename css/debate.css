@@ -1,0 +1,177 @@
+/* ==========================================================
+   debate.html
+   ========================================================== */
+
+.debate-container{
+  padding:clamp(36px, 6vw, 64px) 0 clamp(56px, 8vw, 96px);
+}
+
+.debate-container h2{
+  font-size:clamp(1.5rem, 3vw, 2rem);
+  max-width:26ch;
+}
+
+.description{
+  color:var(--text-muted);
+  font-size:1rem;
+  max-width:62ch;
+  margin-bottom:1.8em;
+}
+
+.sample-box{
+  margin-bottom:2em;
+}
+
+.sample-box label{
+  display:block;
+  font-weight:600;
+  font-size:.85rem;
+  margin-bottom:.7em;
+}
+
+.sample-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.sample-row select{
+  flex:1 1 260px;
+  padding:.8em .9em;
+  border:1.5px solid var(--parchment-400);
+  border-radius:var(--radius-sm);
+  background:var(--parchment-100);
+  color:var(--text-ink);
+}
+
+.sample-row select:focus{
+  outline:none;
+  border-color:var(--gold-500);
+}
+
+.sample-row button{
+  flex:0 0 auto;
+  border:1.5px solid var(--ink-900);
+  background:var(--ink-900);
+  color:var(--text-cream);
+  border-radius:var(--radius-sm);
+  padding:.8em 1.4em;
+  font-weight:600;
+  transition:background .18s var(--ease);
+}
+
+.sample-row button:hover{
+  background:var(--ink-700);
+}
+
+.field{
+  margin-bottom:1.4em;
+}
+
+.field-topic label{
+  display:block;
+  font-weight:600;
+  font-size:.85rem;
+  margin-bottom:.5em;
+}
+
+.field-topic input{
+  width:100%;
+  padding:.9em 1em;
+  border:1.5px solid var(--parchment-400);
+  border-radius:var(--radius-sm);
+  background:var(--parchment-200);
+  color:var(--text-ink);
+  font-family:var(--font-display);
+  font-size:1.1rem;
+}
+
+/* ---- sutra thread: the five linked fields ---- */
+
+.sutra-thread{
+  list-style:none;
+  margin:1.8em 0 2em;
+  padding:0;
+  position:relative;
+}
+
+.sutra-thread::before{
+  content:"";
+  position:absolute;
+  left:1.05em;
+  top:1.05em;
+  bottom:1.05em;
+  width:2px;
+  background:var(--parchment-400);
+}
+
+.sutra-thread .field{
+  position:relative;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  margin-bottom:1.1em;
+}
+
+.sutra-thread .sutra-num{
+  position:relative;
+  z-index:1;
+}
+
+.field-body{
+  flex:1;
+  background:var(--parchment-200);
+  border:1px solid var(--parchment-300);
+  border-radius:var(--radius-md);
+  padding:16px 18px;
+}
+
+.field-body label{
+  display:block;
+  font-weight:600;
+  font-size:.95rem;
+  margin-bottom:.5em;
+  color:var(--text-ink);
+}
+
+.field-body label em{
+  font-style:italic;
+  font-weight:400;
+  color:var(--text-muted);
+}
+
+.field-body textarea{
+  width:100%;
+  min-height:4.4em;
+  resize:vertical;
+  padding:.7em .85em;
+  border:1.5px solid var(--parchment-400);
+  border-radius:var(--radius-sm);
+  background:var(--parchment-100);
+  color:var(--text-ink);
+  font-family:var(--font-body);
+  line-height:1.5;
+}
+
+.field-body textarea:focus{
+  outline:none;
+  border-color:var(--gold-500);
+}
+
+#debateForm button[type="submit"]{
+  width:100%;
+  font-size:1.05rem;
+  padding:1em;
+  margin-top:.5em;
+}
+
+#message{
+  min-height:1.4em;
+  font-weight:600;
+  margin-top:1em;
+  text-align:center;
+}
+
+@media (max-width: 560px){
+  .sutra-thread::before{ left:1.05em; }
+}
